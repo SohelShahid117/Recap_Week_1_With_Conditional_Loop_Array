@@ -1,8 +1,9 @@
-   // if (a '%c', s b)
-    // {
-    //     printf("Right\n");
-    // }
-    // else
-    // {
-    //     printf("Wrong\n");
-    // }
+if(s=='+'){
+    int result = a+b;
+    if(result == c){
+        printf("Yes");
+    }
+    else{
+        printf("%d",result);
+    }
+    }
