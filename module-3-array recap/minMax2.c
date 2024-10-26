@@ -14,47 +14,30 @@ int main()
             scanf("%d", &A[i]);
         }
     }
-    // printf("now print the value:");
-    //  for (int i = 0; i < n; i++)
-    //  {
-    //      printf("%d ", A[i]);
-    //  }
-    //  printf("\n");
 
     int min = A[0];
     int max = A[0];
+    int minIndex = 0;
+    int maxIndex = 0;
 
     for (int i = 0; i < n; i++)
     {
-        if (A[i] < min)
+        if (A[i] <= min)
         {
             min = A[i];
+            minIndex = i;
         }
-    }
-
-    for (int i = 0; i < n; i++)
-    {
-        if (A[i] > max)
+        if (A[i] >= max)
         {
             max = A[i];
-        }
-    }
-    // printf("\n%d", min);
-    // printf("\n%d", max);
-
-    for (int i = 0; i < n; i++)
-    {
-        if (A[i] == min)
-        {
-            A[i] = max;
-        }
-        else if (A[i] == max)
-        {
-            A[i] = min;
+            maxIndex = i;
         }
     }
 
-    // printf("\n");
+    // printf("\n%d %d", minIndex, min);
+    // printf("\n%d %d\n", maxIndex, max);
+    A[minIndex] = max;
+    A[maxIndex] = min;
 
     for (int i = 0; i < n; i++)
     {
